@@ -17,7 +17,16 @@ public class OddSum {
             System.out.println();
         }
         for (int i = 0; i < args.length; i++) {
-            listInt.add(Integer.parseInt(args[i]));
+            // listInt.add(Integer.parseInt(args[i]));
+            // Andi Anfang
+            try {
+                listInt.add(Integer.parseInt(args[i]));
+            } catch (NumberFormatException e) {
+                System.err.println("Error 42: " + e + " is not a Number");
+                return -1;
+                
+            }
+            // Andi Ende
         }
 
         res = sum(listInt);
